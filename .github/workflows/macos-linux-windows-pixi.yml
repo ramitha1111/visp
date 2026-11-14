@@ -34,6 +34,7 @@ jobs:
         !contains(needs.check_skip_flags.outputs.head-commit-message, '[SKIP-CI PIXI]')) ||
         contains(needs.check_skip_flags.outputs.head-commit-message, '[ENABLE-CI PIXI]')
       }}
+    timeout-minutes: 120
 
     strategy:
       fail-fast: false
